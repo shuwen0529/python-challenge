@@ -48,6 +48,7 @@ with open(csvpath, newline='') as csvfile:
     max_decrease_profit = min(monthly_profit_change)
     decrease_date = date[monthly_profit_change.index(max_decrease_profit)+1]
 
+# Print the analysis to the terminal
 print ('----------Financial Analysis----------')
 print ('Total number of months: '+ str(month_count))
 print ('Net Profit/Losses: '+ '${:.0f}'.format(total_profit))
@@ -56,6 +57,7 @@ print ('Greatest Increase in Profits: '+str(increase_date)+' ${:.0f}'.format(max
 print ('Greatest Decrease in Profits: '+str(decrease_date)+' ${:.0f}'.format(max_decrease_profit)+')')
 print ('---------------------------------------')
 
+# Export a text file with the results
 output = os.path.join('/Users/shuwenzhang/Desktop/BootCamp/Homework/03-Python/SZ_HW#3_PythonChanllege/python-challenge/PyBank/analysis.txt')
 
 with open(output, 'w', newline='') as new:
